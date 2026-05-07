@@ -1,0 +1,12 @@
+[Unit]
+Description=Hibernate/Suspend on lid close (configurable)
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/lid-hibernate.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
